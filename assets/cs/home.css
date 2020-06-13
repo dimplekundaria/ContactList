@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #e6f2ff;
+}
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color: grey;
+}
+.addressIcon{
+     font-size: 100px;
+} 
+#contacts{
+    height: 40px;
+    width:30%;
+    background-color:  #1a8cff;
+     border: solid 1px lightgrey;
+    margin-bottom: 1px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+p{
+    color: white;
+    margin-left: 60px;
+    display: inline;
+    position: absolute;
+}
+#name{
+    height: 40px;
+    width: 100%;
+    background-color: #1a8cff;
+    position: relative;
+}
+div#name:hover{
+    background-color: grey;
+}
+.insert{
+    height: 30px;
+    margin-top: 4px;
+    width: 180px;
+}
+.close{
+    color: white;
+    font-size: 10px;
+}

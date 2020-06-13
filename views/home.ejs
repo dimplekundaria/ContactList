@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            <%=title%>
+        </title>
+        <link rel="stylesheet" href="/cs/home.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+
+    </head>
+    <body>
+        <h1 id="page-heading"><i class="fa fa-address-book addressIcon"></i> Contact List</h1>
+        <div>
+                <% for(let i of contact_list){ %>
+                    <div id="contacts">
+                        <div id="name"><p><%=i.name %></p><p style="margin-left: 230px;"><%=i.phone %></p><a href="/delete-contact/?id=<%=i._id%>">
+                        <i class="fa fa-times-circle close" style="margin-left: 380px;margin-top: 12px; position: absolute;"></i></a></div>
+                        
+                </div>
+               <% } %>
+        </div>
+        <div id="contacts" style="background-color: #e6f2ff;margin-top: 10px; border: none;">
+        <form action="/create-contact" method="POST">
+            <input type="text" class="insert" name="name" placeholder="Enter Name" required>
+             <input type="number" class="insert" name="phone" placeholder="Enter Phone" required>
+
+             <button type="submit" style="height: 30px;">Add</button>
+        </form>
+    </div>
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
